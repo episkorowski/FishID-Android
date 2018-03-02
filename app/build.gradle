@@ -25,6 +25,7 @@ android {
             path "CMakeLists.txt"
         }
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/drawable'] } }
 }
 
 allprojects {
@@ -33,6 +34,8 @@ allprojects {
     }
 }
 
+
 dependencies {
+    implementation 'com.android.support:support-v4:27.1.0'
     compile 'org.tensorflow:tensorflow-android:+'
 }
