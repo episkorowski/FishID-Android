@@ -1,12 +1,12 @@
-american eel
-bluegill
-brown trout
-common carp
-largemouth bass
-northern pike
-pumpkinseed
-rainbow trout
-smallmouth bass
-walleye
-white bullhead
-yellow perch
+American Eel
+Bluegill
+Brown Trout
+Common Carp
+Largemouth Bass
+Northern Pike
+Pumpkinseed
+Rainbow Trout
+Smallmouth Bass
+Walleye
+White Bullhead
+Yellow Perch
