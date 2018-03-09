@@ -16,7 +16,7 @@
 <resources>
 
     <style name="MaterialTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
-
+    <style name="DatabaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>
     <style name="SplashTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>

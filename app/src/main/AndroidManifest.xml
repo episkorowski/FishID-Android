@@ -34,11 +34,14 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ClassifierActivity"></activity>
         <activity
-            android:name=".ClassifierActivity">
+            android:name=".DatabaseActivity"
+            android:theme = "@style/DatabaseTheme">
         </activity>
     </application>
 

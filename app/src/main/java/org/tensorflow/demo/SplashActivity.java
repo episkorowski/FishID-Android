@@ -13,7 +13,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(this, org.tensorflow.demo.ClassifierActivity.class);
+        Intent intent = new Intent(this, org.tensorflow.demo.DatabaseActivity.class);
         startActivity(intent);
         finish();
     }
