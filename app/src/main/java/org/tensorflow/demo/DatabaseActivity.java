@@ -48,13 +48,21 @@ public class DatabaseActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
+
             case R.id.switch_to_live:
                 Log.d(TAG, "Switching to Live Mode");
-                Intent intent = new Intent(this, org.tensorflow.demo.ClassifierActivity.class);
-                startActivity(intent);
+                Intent liveIntent = new Intent(this, org.tensorflow.demo.ClassifierActivity.class);
+                startActivity(liveIntent);
                 finish();
                 return true;
-
+            /*
+            case R.id.about:
+                Log.d(TAG, "Switching to About page");
+                Intent aboutIntent = new Intent(this, org.tensorflow.demo.AboutActivity.class);
+                startActivity(aboutIntent);
+                finish();
+                return true;
+            */
             default:
                 return super.onOptionsItemSelected(item);
         }
