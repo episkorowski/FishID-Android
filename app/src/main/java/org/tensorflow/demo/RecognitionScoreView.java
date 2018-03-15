@@ -18,6 +18,7 @@ package org.tensorflow.demo;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -41,9 +42,10 @@ public class RecognitionScoreView extends View implements ResultsView {
             TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
     fgPaint = new Paint();
     fgPaint.setTextSize(textSizePx);
-
+    int color = ContextCompat.getColor(context, R.color.database_text);
+    fgPaint.setColor(color);
     bgPaint = new Paint();
-    bgPaint.setColor(0xcc4285f4);
+    bgPaint.setColor(ContextCompat.getColor(context, R.color.database_background));
   }
 
   @Override
@@ -61,7 +63,7 @@ public class RecognitionScoreView extends View implements ResultsView {
 
     if (results != null) {
       for (final Recognition recog : results) {
-        canvas.drawText(recog.getTitle() + ": " + recog.getConfidence(), x, y, fgPaint);
+        canvas.drawText(recog.getTitle() + ": " + (recog.getConfidence()*100) + "%", x, y, fgPaint);
         y += fgPaint.getTextSize() * 1.5f;
       }
     }
