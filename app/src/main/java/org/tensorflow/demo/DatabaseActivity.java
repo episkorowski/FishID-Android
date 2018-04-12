@@ -55,14 +55,21 @@ public class DatabaseActivity extends AppCompatActivity {
                 startActivity(liveIntent);
                 finish();
                 return true;
-            /*
+
+            case R.id.database:
+                Log.d(TAG, "Switching to Database");
+                Intent databaseIntent = new Intent(this, org.tensorflow.demo.DatabaseActivity.class);
+                startActivity(databaseIntent);
+                finish();
+                return true;
+
             case R.id.about:
                 Log.d(TAG, "Switching to About page");
                 Intent aboutIntent = new Intent(this, org.tensorflow.demo.AboutActivity.class);
                 startActivity(aboutIntent);
                 finish();
                 return true;
-            */
+
             default:
                 return super.onOptionsItemSelected(item);
         }

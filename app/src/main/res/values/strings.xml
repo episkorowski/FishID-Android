@@ -17,4 +17,6 @@
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="about_page_description">FishID is an image classification app built with TensorFlow. It utilizes transfer learning from Google’s Inception-v3 image recognition model to classify common species of North American freshwater fish. The app is still in an early state, but it should be able to recognize any of the fish species in the database view with a reasonable accuracy.</string>
+    <string name="about_page_instructions">To identify a fish, select Live ID Mode from the settings in the menu bar and point the camera at what you wish to identify.</string>
 </resources>

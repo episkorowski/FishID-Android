@@ -7,7 +7,12 @@
         android:title="Live ID Mode" />
 
     <item
+        android:id="@+id/database"
+        android:title="Database" />
+
+    <item
         android:id="@+id/about"
         android:title="About" />
+
 
 </menu>
