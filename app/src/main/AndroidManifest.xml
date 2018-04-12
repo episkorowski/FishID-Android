@@ -38,13 +38,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClassifierActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".AboutActivity"></activity>
+        <activity
+            android:name=".ClassifierActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DatabaseActivity"
-            android:theme = "@style/DatabaseTheme">
-        </activity>
+            android:theme="@style/DatabaseTheme" />
+        <activity
+            android:name=".AboutActivity"
+            android:theme="@style/DatabaseTheme"/>
     </application>
 
 </manifest>

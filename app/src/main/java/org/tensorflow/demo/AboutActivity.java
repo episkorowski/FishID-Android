@@ -1,33 +1,55 @@
 package org.tensorflow.demo;
 
-import android.app.Activity;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import mehdi.sakout.aboutpage.AboutPage;
-import mehdi.sakout.aboutpage.Element;
+public class AboutActivity extends AppCompatActivity {
 
-/**
- * Created by Eric on 3/8/2018.
- */
-
-public class AboutActivity extends Activity {
+    private static final String TAG = "AboutActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View aboutPage = new AboutPage(this)
-                .isRTL(false)
-                //.setImage(R.drawable.dummy_image)
-                .addItem(new Element().setTitle("Version 0.1"))
-                .addEmail("ericpiskorowski@gmail.com")
-                .addWebsite("https://episkorowski.github.io/")
-                //.addPlayStore()
-                .addGitHub("episkorowski")
-                //.addItem(getCopyRightsElement())
-                .create();
+        setContentView(R.layout.activity_about);
+    }
 
-        setContentView(aboutPage);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.data_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.switch_to_live:
+                Log.d(TAG, "Switching to Live Mode");
+                Intent liveIntent = new Intent(this, org.tensorflow.demo.ClassifierActivity.class);
+                startActivity(liveIntent);
+                finish();
+                return true;
+
+            case R.id.database:
+                Log.d(TAG, "Switching to Database");
+                Intent databaseIntent = new Intent(this, org.tensorflow.demo.DatabaseActivity.class);
+                startActivity(databaseIntent);
+                finish();
+                return true;
+
+            case R.id.about:
+                Log.d(TAG, "Switching to About page");
+                Intent aboutIntent = new Intent(this, org.tensorflow.demo.AboutActivity.class);
+                startActivity(aboutIntent);
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
